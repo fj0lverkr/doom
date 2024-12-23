@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-;; (setq user-full-name "John Doe"
-;;       user-mail-address "john@doe.com")
+(setq user-full-name "Nils Nahooy"
+ user-mail-address "nils.nahooy@live.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -75,7 +75,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; NILS Config
 (setq doom-font (font-spec :Family "FantasqueSansM Nerd Font Mono-regular-normal-normal" :size 18))
 (setq doom-theme `catppuccin)
 (setq default-directory "~")
-(add-hook 'window-setup-hook #'toggle-frame-maximized)
+(setq initial-frame-alist '((top . 1) (left . 1) (width . 114) (height . 32)))
+;;(add-to-list 'initial-frame-alist '(maximized))
