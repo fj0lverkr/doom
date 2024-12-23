@@ -79,5 +79,3 @@
 (setq doom-font (font-spec :Family "FantasqueSansM Nerd Font Mono-regular-normal-normal" :size 18))
 (setq doom-theme `catppuccin)
 (setq default-directory "~")
-(setq initial-frame-alist '((top . 1) (left . 1) (width . 114) (height . 32)))
-;;(add-to-list 'initial-frame-alist '(maximized))
