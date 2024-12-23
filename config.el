@@ -76,6 +76,10 @@
 ;; they are implemented.
 
 ;; NILS Config
-(setq doom-font (font-spec :Family "FantasqueSansM Nerd Font Mono-regular-normal-normal" :size 18))
+(if (eq system-type 'windows-nt)
+   (setq doom-font (font-spec :Family "FantasqueSansM Nerd Font" :size 16))
+   (setq doom-font (font-spec :Family "FantasqueSansMono NF" :size 18))
+)
+  
 (setq doom-theme `catppuccin)
 (setq default-directory "~")
