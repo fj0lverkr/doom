@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Nils Nahooy"
- user-mail-address "nils.nahooy@live.com")
+      user-mail-address "nils.nahooy@live.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -36,7 +36,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type `relative)
+(setq display-line-numbers-type 'relative)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -77,9 +77,14 @@
 
 ;; NILS Config
 (if (eq system-type 'windows-nt)
-   (setq doom-font (font-spec :Family "FantasqueSansM Nerd Font" :size 16))
-   (setq doom-font (font-spec :Family "FantasqueSansMono NF" :size 18))
-)
-  
+    ;; Windows
+    (setq doom-font (font-spec :Family "FantasqueSansM Nerd Font" :size 16))
+  ;; Else Linux
+  (setq doom-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 18)
+        doom-variable-pitch-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 16)
+        doom-symbol-font (font-spec :family "FantasqueSansM Nerd Font Mono")
+        doom-big-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 24 :weight 'bold))
+  )
+
 (setq doom-theme `catppuccin)
 (setq default-directory "~")
