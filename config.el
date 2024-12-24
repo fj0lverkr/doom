@@ -75,11 +75,14 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+
 ;; NILS Config
+
+;; set fonts
 (if (eq system-type 'windows-nt)
     ;; Windows
     (setq doom-font (font-spec :Family "FantasqueSansM Nerd Font" :size 16))
-  ;; Else Linux
+  ;; else Linux
   (setq doom-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 18)
         doom-variable-pitch-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 16)
         doom-symbol-font (font-spec :family "FantasqueSansM Nerd Font Mono")
@@ -92,5 +95,10 @@
 ;; start every frame maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; init packages
+(use-package! elcord)
+(elcord-mode)
+
+;; other
 (setq doom-theme `catppuccin)
 (setq default-directory "~")
