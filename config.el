@@ -86,5 +86,11 @@
         doom-big-font (font-spec :family "FantasqueSansM Nerd Font Mono" :size 24 :weight 'bold))
   )
 
+;; start the initial frame maximized
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+;; start every frame maximized
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (setq doom-theme `catppuccin)
 (setq default-directory "~")
